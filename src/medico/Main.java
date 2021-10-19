@@ -13,6 +13,8 @@ public class Main {
         
         for(Medico.AvailableAppointment aA: medico.getAvailableAppointments()){
             System.out.println(aA.getDate() + " " + aA.getTime());
+            
+            System.out.println("Hola");
         }
     }
 }
