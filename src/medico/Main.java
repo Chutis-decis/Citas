@@ -9,6 +9,9 @@ public class Main {
         medico.addAvailableAppointment(new Date (),"7pm");
         medico.addAvailableAppointment(new Date (),"12am");
         
+        
+        
+        
         Pattient paciente = new Pattient("Pedro Gomez Garza","p@p.bot.mx");
         
         
@@ -16,6 +19,8 @@ public class Main {
         for(Medico.AvailableAppointment aA: medico.getAvailableAppointments()){
             System.out.println(aA.getDate() + " " + aA.getTime());
         }
+        
+        System.out.println(paciente);
         
     }
 }

@@ -48,7 +48,18 @@ public class User {
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+        if (phoneNumber.length()>8){
+            System.out.println("El número telefonico debe ser de 8 digitos maximo");
+        }else if (phoneNumber.length()==8){
+            this.phoneNumber=phoneNumber;
+        }
     }
+
+    @Override //Es un metodo que esta siendo extraido de la superclase USER
+    public String toString() {
+        return "User: " + name + " Email: " + email +
+                "\nAddress: " + address+". \nPhone " + phoneNumber; 
+    }
+    
     
 }

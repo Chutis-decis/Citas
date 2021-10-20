@@ -1,18 +1,13 @@
 package medico;
-public class Pattient {
-    int id;
-    private String name;
-    private String email; 
-    private String address;
-    private String phoneNumber;
+public class Pattient extends User{
+    
     private String birthday;
     private double weight;
     private double height;
     private String blood;
     
     public Pattient(String name, String email){
-        this.name=name;
-        this.email=email;
+        super (name,email);
     }
     
     public void setWeight(double weight){
@@ -20,51 +15,6 @@ public class Pattient {
     }
     public String getWeight(){
         return this.weight + " Kg";
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        if (phoneNumber.length() > 8){
-            System.out.println("El numero telefonico es incorrecto");
-        }else if (phoneNumber.length()==8){
-            this.phoneNumber = phoneNumber;
-        }
-        
     }
 
     public String getBirthday() {
@@ -89,6 +39,12 @@ public class Pattient {
 
     public void setBlood(String blood) {
         this.blood = blood;
+    }
+
+    @Override
+    public String toString() {//ToString proviene de la clase Object 
+        return super.toString() + "\nAge: " + birthday + "\n Weight: " +getWeight()
+                + "\n Height: " + getHeight() + "\n Blood " +blood; //To change body of generated methods, choose Tools | Templates.
     }
     
 }
