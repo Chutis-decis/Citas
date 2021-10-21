@@ -1,5 +1,5 @@
-package medico;
-public class User {
+package model;
+public abstract class User {
     private int id;
     private String name;
     private String email;
@@ -57,9 +57,9 @@ public class User {
 
     @Override //Es un metodo que esta siendo extraido de la superclase USER
     public String toString() {
-        return "User: " + name + " Email: " + email +
+        return  "\nEmail: " + email +
                 "\nAddress: " + address+". \nPhone " + phoneNumber; 
     }
     
-    
+    public abstract void showDataUser();
 }

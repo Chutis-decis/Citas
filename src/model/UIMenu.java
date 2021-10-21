@@ -1,4 +1,4 @@
-package medico;
+package model;
 
 import java.util.Scanner;
 

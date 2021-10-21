@@ -1,4 +1,5 @@
-package medico;
+package model;
+
 public class Pattient extends User{
     
     private String birthday;
@@ -8,6 +9,8 @@ public class Pattient extends User{
     
     public Pattient(String name, String email){
         super (name,email);
+        System.out.println("El nombre del paciente es: " + name);
+        System.out.println("Su correo electronico es: " + email);
     }
     
     public void setWeight(double weight){
@@ -45,6 +48,12 @@ public class Pattient extends User{
     public String toString() {//ToString proviene de la clase Object 
         return super.toString() + "\nAge: " + birthday + "\n Weight: " +getWeight()
                 + "\n Height: " + getHeight() + "\n Blood " +blood; //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void showDataUser() {
+        
+        System.out.println("Historial completo desde el nacimiento\n");
     }
     
 }
